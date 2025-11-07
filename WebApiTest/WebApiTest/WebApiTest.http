@@ -1,0 +1,26 @@
+@WebApiTest_HostAddress = http://localhost:5191
+
+GET {{WebApiTest_HostAddress}}/api/ClienteController
+Accept: application/json
+
+###
+
+
+### HangfireEvents - Fire and Forget
+GET {{WebApiTest_HostAddress}}/fire-and-forget
+
+### HangfireEvents - Fire and Forget - Continuation
+GET {{WebApiTest_HostAddress}}/fire-and-forget-continuation
+
+### HangfireEvents - Fire and Forget - Delayed
+GET {{WebApiTest_HostAddress}}/fire-and-forget-delayed
+
+### HangfireEvents - Recurring
+GET {{WebApiTest_HostAddress}}/recurring
+
+### HangfireEvents - Job
+GET {{WebApiTest_HostAddress}}/cancel-job/recurring-job-55cbf186-abd4-4632-bca7-5fe67e232683
+
+
+
+

@@ -1,0 +1,21 @@
+<h2>Usuário logado com sucesso!</h2>
+<br />
+
+<p>clientes works!</p>
+
+
+<h2>Lista de Clientes</h2>
+
+<div *ngIf="clientes.length > 0; else noClients">
+  <ul>
+    <li *ngFor="let cliente of clientes">
+      {{ cliente.nome }} - {{ cliente.email }}
+    </li>
+  </ul>
+</div>
+
+<ng-template #noClients>
+  <p>Nenhum cliente encontrado.</p>
+</ng-template>
+
+<button type="submit" (click)="logout()">Logout</button>

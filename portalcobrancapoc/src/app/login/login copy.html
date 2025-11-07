@@ -1,0 +1,33 @@
+<form (ngSubmit)="onSubmit()" class="login-form">
+  <div>
+    <label>Username:</label>
+    <input type="text" [(ngModel)]="username" name="username" required />
+  </div>
+  <div>
+    <label>Password:</label>
+    <input type="password" [(ngModel)]="password" name="password" required />
+  </div>
+  <button type="submit">Login</button>
+
+  <br />
+
+  <app-google-sign-in></app-google-sign-in>
+
+  <div id="g_id_onload"
+     data-client_id="685519110599-09ldq75r78pa3mq82o7eeqh15g3eun75.apps.googleusercontent.com"
+     data-context="signin"
+     data-ux_mode="popup"
+     data-login_uri="http://localhost:5191/api/account/login/google?returnUrl=http://localhost:4200/clientes"
+     data-auto_select="true"
+     data-itp_support="true">
+  </div>
+
+  <div class="g_id_signin"
+     data-type="standard"
+     data-shape="rectangular"
+     data-theme="outline"
+     data-text="signin_with"
+     data-size="large"
+     data-logo_alignment="left">
+  </div>
+</form>
